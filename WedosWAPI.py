@@ -18,10 +18,10 @@ class WedosWAPI:
     JSON_URL = "https://api.wedos.com/wapi/json"
     XML_URL = "https://api.wedos.com/wapi/xml"
 
-    def __init__(self, user: str, wapi_password: str, *,
+    def __init__(self, username: str, password: str, *,
                  use_json: bool = True, timeout: int = 60):
-        self.user = user
-        self.wapi_password = wapi_password
+        self.user = username
+        self.wapi_password = password
         self.use_json = use_json
         self.timeout = timeout
         self._tz = pytz.timezone("Europe/Prague")
